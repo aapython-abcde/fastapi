@@ -53,7 +53,7 @@ def login_user(email, password):
     global auth_token
 
     response = requests.post(
-        "http://127.0.0.1:8000/users/login",
+        f"{API_BASE_URL}/users/login",
         json={
             "email": email,
             "password": password
@@ -71,7 +71,7 @@ def get_profile():
     global auth_token
 
     response = requests.get(
-        "http://127.0.0.1:8000/users/profile",
+        f"{API_BASE_URL}/users/profile",
         headers={
             "Authorization": f"Bearer {auth_token}"
         }
@@ -82,24 +82,24 @@ def get_profile():
 def upload_document(filepath):
     files = {"file": open(filepath, "rb")}
     response = requests.post(
-        "http://127.0.0.1:8000/users/upload",
+        f"{API_BASE_URL}/users/upload",
         files=files
     )
     return response.json()
 
 def get_uploaded_files():
-    response = requests.get("http://127.0.0.1:8000/users/files")
+    response = requests.get(f"{API_BASE_URL}/users/files")
     return response.json()
 
 def get_processing_log():
     response = requests.get(
-        "http://127.0.0.1:8000/users/processing-log"
+        f"{API_BASE_URL}/users/processing-log"
     )
     return response.json()
 
 def ask_ai(prompt):
     response = requests.post(
-        "http://127.0.0.1:8000/chat",
+        f"{API_BASE_URL}/chat",
 
         json={
             "prompt":
