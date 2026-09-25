@@ -1,7 +1,17 @@
 import gradio as gr
 import requests
+import os
 
-USERS_API_URL = "http://127.0.0.1:8000/users"
+
+API_BASE_URL = os.getenv(
+    "API_BASE_URL",
+    "https://fastapi-wbdq.onrender.com/"
+)
+
+USERS_API_URL = (
+    f"{API_BASE_URL}/users"
+)
+
 auth_token = None
 
 def api_error(response):
