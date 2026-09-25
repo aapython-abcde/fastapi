@@ -1,0 +1,77 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- FastAPI / Uvicorn ---
+#*.log
+*.pid
+*.sock
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.cache
+
+# --- Gradio ---
+gradio_cached_examples/
+flagged/
+.gradio/
+
+# --- Jupyter (common alongside FastAPI/Gradio dev) ---
+.ipynb_checkpoints/
+
+# --- VS Code ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Databases (common in FastAPI projects) ---
+#*.sqlite3
+#*.db
+
+# --- Misc build/dist ---
+*.egg-info
+.tox/
+.nox/
