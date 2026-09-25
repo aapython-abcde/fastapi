@@ -5,7 +5,7 @@ import os
 
 API_BASE_URL = os.getenv(
     "API_BASE_URL",
-    "https://fastapi-wbdq.onrender.com/"
+    "https://fastapi-wbdq.onrender.com"
 )
 
 USERS_API_URL = (
